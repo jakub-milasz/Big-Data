@@ -1,0 +1,9 @@
+1. Walidacja schematu danych na wejściu (Schema Validation) - każdy zestaw danych wchodzący do pipeline'u jest sprawdzany pod względem zgodności ze zdefiniowanym schematem.
+
+2. Idempotentność kroków przetwarzania - każdy krok przetwarzania danych powinien być zaprojektowany tak, aby można go było uruchomić wielokrotnie bez zmiany efektu końcowego.
+
+3. Automatyczna detekcja anomalii i logowanie - wbudowana funkcja wykrywania odstępstw od normalnych wartości (np. zbyt wysokie liczby, nienaturalne wzorce danych).
+
+4. Enkapsulacja transformacji i testy jednostkowe - transformacje danych są zamknięte w małych, niezależnych funkcjach z testami jednostkowymi.
+
+5. Rejestrowanie metadanych i audytowalność (Data Lineage & Logging) - Każdy etap pipeline zapisuje informacje: jakie dane, kiedy, kto i czym zostały przetworzone.
