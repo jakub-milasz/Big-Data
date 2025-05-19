@@ -8,7 +8,8 @@ LoggingUtils.setupLogging()
 
     import spark.implicits._
     logInfo("odpalam")
-    val df = new DataReader().read_csv(args(0))
+    val df = new DataReader().read_csv(args(0), "csv")
     df.show()
+
   }
 }

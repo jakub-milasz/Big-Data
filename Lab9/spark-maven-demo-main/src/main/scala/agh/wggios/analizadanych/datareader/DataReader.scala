@@ -9,7 +9,8 @@ import java.nio.file.{Files, Paths}
 
 class DataReader extends SparkSessionProvider {
 
-  def transformColumn(df: DataFrame, columnName: String, targetType: DataType): DataFrame = {
-    df.withColumn(columnName, col(columnName).cast(targetType))
+  def read_csv(path: String, format: String): DataFrame =  {
+    logInfo("Czytanie pliku")
+    spark.read.format(format).option("header", value = true).option("inferSchema", value = true).load(path)
   }
 }
