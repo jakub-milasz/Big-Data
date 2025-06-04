@@ -1,0 +1,18 @@
+Spark UI:
+
+1. Jobs – lista zadań (jobs), ich status, czas trwania, powiązane akcje (np. collect, join).
+
+2. Stages – etapy wykonania jobów, szczegóły o taskach, czasach, shuffle, wejściu/wyjściu danych.
+
+3. Storage – dane cache’owane (RDD/DataFrame), ich rozmiar i rozmieszczenie na executorach.
+
+4. Executors – zużycie pamięci i CPU, liczba tasków, ilość przetworzonych danych, rozkład pracy.
+
+5. SQL/DataFrame – zapytania i operacje DataFrame, fizyczny plan wykonania (DAG), pokazuje m.in. shuffle.
+
+Dystrybucja danych – gdzie szukać?
+1. Stages -> Tasks – pokazuje jak dane są rozdzielone między partycje.
+
+2. Executors – widać nierównomierne obciążenie.
+
+3. SQL/DAG – wskazuje miejsca wymagające shuffle (zmiana rozkładu danych).
